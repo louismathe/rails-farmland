@@ -9,7 +9,30 @@
 3. Create the database with `rails db:create`.
 4. Run the migrations with `rails db:migrate`.
 
-## Feature adding workflow
+## Development
+
+### Local
+
+Launch local server:
+```sh
+rails server
+```
+
+### Production
+
+...
+
+### Generating Seeds
+
+1. Create user as farmer
+2. Create farm
+3. Assign user to farm
+4. Create user as customer
+5. Create a product
+6. Assign product to farm
+7. Create an order with customer + product
+
+### Feature adding workflow
 
 Before working on a new feature, make sure you pulled the latest changes from `origin master` with `git pull origin master`.
 
@@ -33,16 +56,6 @@ git push origin branch-name
 Submit a new pull request on branch' page on GitHub interface and wait for coworkers approval.
 
 When your PR has been approved, you can `git pull` the origin master and delete your old branch with `git sweep`.
-
-## Generate Seeds
-
-1. Create user as farmer
-2. Create farm
-3. Assign user to farm
-4. Create user as customer
-5. Create a product
-6. Assign product to farm
-7. Create an order with customer + product
 
 ## Roadmap
 

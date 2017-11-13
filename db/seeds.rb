@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# user = User.create! :email => 'john@gmail.com', :password => 'topsecret'
+User.destroy_all
+User.create!(email: "john@gmail.com", password: "123456789")
+User.create!(email: "paul@gmail.com", password: "123456789")
+User.create!(email: "georges@gmail.com", password: "123456789")
+User.create!(email: "ringo@gmail.com", password: "123456789")

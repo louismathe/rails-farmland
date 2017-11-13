@@ -53,4 +53,5 @@ ActiveRecord::Schema.define(version: 20171113162343) do
 
   add_foreign_key "farms", "users"
   add_foreign_key "products", "farms"
+  
 end

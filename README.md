@@ -9,6 +9,16 @@
 3. Create the database with `rails db:create`.
 4. Run the migrations with `rails db:migrate`.
 
+## Generate Seeds
+
+1. Create user as farmer
+2. Create farm
+3. Assign user to farm
+4. Create user as customer
+5. Create a product
+6. Assign product to farm
+7. Create an order with customer + product
+
 ## Roadmap
 
 ### Components
@@ -20,10 +30,13 @@
 
 ### Models
 
-- [ ] Create User model
-- [ ] Create Farm model
-- [ ] Create Product model
-- [ ] Create Order model
+- [x] Create User model
+- [x] Create Farm model
+- [x] Create Product model
+- [x] Create Order model
+- [ ] Create seeds
+- [ ] Add farmer option to user (Upgrade)
+- [ ] Create Review model (Upgrade)
 
 ### Homepage
 

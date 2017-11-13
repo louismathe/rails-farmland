@@ -1,13 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# user = User.create! :email => 'john@gmail.com', :password => 'topsecret'
+# ## Generate Seeds
+
+# 0. Clean all DB
+Product.destroy_all
+Order.destroy_all
+Farm.destroy_all
 User.destroy_all
-User.create!(email: "john@gmail.com", password: "123456789")
-User.create!(email: "paul@gmail.com", password: "123456789")
-User.create!(email: "georges@gmail.com", password: "123456789")
-User.create!(email: "ringo@gmail.com", password: "123456789")
+
+# 1. Create user as farmer
+uf  = User.new(email: "john@gmail.com", password: "123456789")
+
+# 2. Create farm
+f = Farm.new(name:"La ferme de John", address: "Bordeaux")
+
+# 3. Assign user to farm
+f.user = uf
+
+# 4. Create user as customer
+uc  = User.new(email: "paul@gmail.com", password: "123456789")
+
+# 5. Create a product
+p = Product.new(name: "tomate", price: "1")
+
+# 6. Assign product to farm
+p.farm = f
+
+# 7. Create an order with customer + product
+o = Order.new()

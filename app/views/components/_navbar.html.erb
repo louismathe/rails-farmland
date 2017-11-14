@@ -16,6 +16,8 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-fland-item">
         <div class="dropdown">
+          <%# avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+          <%#= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <%= image_tag "http://kitt.lefland.com/placeholder/users/LinkToUserPhoto", class: "avatar dropdown-toggle", id: "navbar-fland-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-fland-dropdown-menu">
             <li>
@@ -49,4 +51,3 @@
     </div>
   </div>
 </div>
-

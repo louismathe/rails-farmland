@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   # orders => create
   # My::orders => index
 resources :farms, only: [:index, :show]
-
 end
 
 

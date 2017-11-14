@@ -73,6 +73,10 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [x] Create Product model
 - [x] Create Order model
 - [x] Create seeds
+- [ ] Add photo to product
+- [ ] Add name to User
+- [ ] Add Photo to farm
+- [ ] Add delivery time to orders
 - [ ] Add farmer option to user (Upgrade)
 - [ ] Create Review model (Upgrade)
 
@@ -103,3 +107,15 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [ ] Design login page
 - [ ] Design signup page
 - [ ] Design forgot password page
+
+# As a user I can
+- [x] See all farmers
+- [ ] Show a specific farmer:
+    - Farmer picture banner
+    - Product picture
+    - form add date delivery
+    - Show Product price
+    - ( Add google map link )
+    - Delete review date 
+    - Iterate on reviews
+    - Google Map Api key

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+
+    <% @farms.each do |farm| %>
+      <div class="col-xs-3">
+        <%= link_to farm_path(farm) do %>
+          <div class="cards" style="background-image: url('https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb');">
+            <h2><%= farm.name %></h2>
+
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

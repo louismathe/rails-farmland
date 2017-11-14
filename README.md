@@ -72,7 +72,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [x] Create Farm model
 - [x] Create Product model
 - [x] Create Order model
-- [ ] Create seeds
+- [x] Create seeds
 - [ ] Add farmer option to user (Upgrade)
 - [ ] Create Review model (Upgrade)
 

@@ -1,3 +1,12 @@
+.frame-cards {
+  padding: 10px;
+  background-color: $graycomp;
+  border-radius: 5px;
+  min-width: 320px;
+  min-height: 200px;
+  margin: 10px;
+}
+
 .cards {
   background: linear-gradient(135deg,
     rgba(0,0,0,0.8) 0%,
@@ -9,25 +18,30 @@
   background-size: cover;
   padding: 10px;
   border-radius: 5px;
+  margin: 0 auto;
 
 }
 .cards-category {
   color: white;
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
 }
 .cards-description {
   color: white;
   position: absolute;
   bottom: 0px;
 }
-.cards-image {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right:10px;
-}
-.row {
 
+
+.card-footer {
+  font-size: 1em;
+  text-align: center;
+  color: $gray;
+  border-radius:4px;
+  max-width: 300;
+  height: 70px;
+  margin: 10px 5px;
+  background-color: $light-gray;
 }
+

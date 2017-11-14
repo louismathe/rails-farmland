@@ -1,6 +1,12 @@
+-<input type="hidden" id="address" value="<%= @farm.address %>">
+
 <div class="farm-banner" style="background: black;">
   <h1><%= @farm.name %></h1>
 </div>
+
+  <% @farm.products.each do |product| %>
+    <%= product.name %>
+  <% end %>
 
 <div class="container">
   <div class="product">

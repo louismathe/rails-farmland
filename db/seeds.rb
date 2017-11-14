@@ -29,15 +29,18 @@ pomme = Product.new(name: 'pomme', price: 5)
 peche = Product.new(name: 'peche', price: 1)
 poire = Product.new(name: 'poire', price: 11)
 
-puts "6. Assign product to farm"
+puts "6. Assign product to farm & farm to product"
 pomme.farm = johnfarm
 poire.farm = paulfarm
 peche.farm = georgesfarm
+
 
 puts "7. Create an order with customer + product"
 sergeorder = Order.new(quantity: 1)
 sergeorder.product = pomme
 sergeorder.user = serge
+sergeorder.rating = 4
+sergeorder.review = "c'est cool"
 
 john.save
 johnfarm.save
@@ -48,6 +51,8 @@ sergeorder.save
 quentinorder = Order.new(quantity: 1)
 quentinorder.product = poire
 quentinorder.user = quentin
+quentinorder.rating = 2
+quentinorder.review = "c'est nul"
 
 paul.save
 paulfarm.save
@@ -58,6 +63,8 @@ quentinorder.save
 louisorder = Order.new(quantity: 1)
 louisorder.product = peche
 louisorder.user = louis
+louisorder.rating = 3
+louisorder.review = "c'est pas top"
 
 georges.save
 georgesfarm.save

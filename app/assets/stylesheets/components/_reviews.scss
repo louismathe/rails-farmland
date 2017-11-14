@@ -26,13 +26,5 @@
         color: $green;
       }
     }
-
-    .date {
-      color: lighten($gray, 50%);
-      @media(min-width: 768px) {
-        display: inline-block;
-        margin: 0 0 0 20px;
-      }
-    }
   }
 }

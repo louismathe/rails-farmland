@@ -111,11 +111,11 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 # As a user I can
 - [x] See all farmers
 - [ ] Show a specific farmer:
-    - Farmer picture banner
-    - Product picture
-    - form add date delivery
-    - Show Product price
-    - ( Add google map link )
-    - Delete review date 
-    - Iterate on reviews
-    - Google Map Api key
+    - [ ] Farmer picture banner
+    - [ ] Product picture
+    - [ ] form add date delivery
+    - [x] Show Product price
+    - [ ] ( Add google map link )
+    - [x] Delete review date
+    - [ ] Iterate on reviews
+    - [ ] Google Map Api key

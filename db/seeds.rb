@@ -1,13 +1,66 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# user = User.create! :email => 'john@gmail.com', :password => 'topsecret'
+# 0. Clean all DB
+Order.destroy_all
+Product.destroy_all
+Farm.destroy_all
 User.destroy_all
-User.create!(email: "john@gmail.com", password: "123456789")
-User.create!(email: "paul@gmail.com", password: "123456789")
-User.create!(email: "georges@gmail.com", password: "123456789")
-User.create!(email: "ringo@gmail.com", password: "123456789")
+
+# 1. Create user as farmer
+john = User.new(email: 'john@gmail.com', password: '123456789')
+paul = User.new(email: 'paul@gmail.com', password: '123456789')
+georges = User.new(email: 'georges@gmail.com', password: '123456789')
+
+# 2. Create farm
+johnfarm = Farm.new(name: 'La ferme de John', address: 'Bordeaux')
+paulfarm = Farm.new(name: 'La ferme de Paul', address: 'Talence')
+georgesfarm = Farm.new(name: 'La ferme de Georges', address: 'Pessac')
+
+# 3. Assign user to farm
+johnfarm.user = john
+paulfarm.user = paul
+georgesfarm.user = georges
+
+# 4. Create user as customer
+serge = User.new(email: 'serge@gmail.com', password: '123456789')
+quentin = User.new(email: 'quentin@gmail.com', password: '123456789')
+louis = User.new(email: 'louis@gmail.com', password: '123456789')
+
+# 5. Create a product
+pomme = Product.new(name: 'pomme', price: 5)
+peche = Product.new(name: 'peche', price: 1)
+poire = Product.new(name: 'poire', price: 11)
+
+# 6. Assign product to farm
+pomme.farm = johnfarm
+poire.farm = paulfarm
+peche.farm = georgesfarm
+
+# 7. Create an order with customer + product
+sergeorder = Order.new(quantity: 1)
+sergeorder.product = pomme
+sergeorder.user = serge
+
+john.save
+johnfarm.save
+serge.save
+pomme.save
+sergeorder.save
+#################
+quentinorder = Order.new(quantity: 1)
+quentinorder.product = poire
+quentinorder.user = quentin
+
+paul.save
+paulfarm.save
+quentin.save
+poire.save
+quentinorder.save
+#################
+louisorder = Order.new(quantity: 1)
+louisorder.product = peche
+louisorder.user = louis
+
+georges.save
+georgesfarm.save
+louis.save
+peche.save
+louisorder.save

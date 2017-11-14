@@ -1,4 +1,5 @@
 const address = document.getElementById("address");
+const mapContainer = document.getElementById('map');
 
 document.addEventListener('DOMContentLoaded', () => {
   fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address.value}`)
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let addressFound = {lat: latitude, lng: longitude };
     console.log(addressFound)
-    let map = new google.maps.Map(document.getElementById('map'), {
+    let map = new google.maps.Map(mapContainer, {
       zoom: 12,
       center: addressFound
     });

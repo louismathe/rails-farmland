@@ -6,27 +6,21 @@
 
   <!-- Right Navigation -->
   <div class="navbar-fland-right hidden-xs hidden-sm">
-
+    <%= link_to "All farms", "", class: "navbar-fland-item navbar-fland-link" %>
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-fland-item navbar-fland-link" %>
-      <%= link_to "Trips", "#", class: "navbar-fland-item navbar-fland-link" %>
-      <%= link_to "Messages", "#", class: "navbar-fland-item navbar-fland-link" %>
+
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-fland-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lefland.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-fland-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "http://kitt.lefland.com/placeholder/users/LinkToUserPhoto", class: "avatar dropdown-toggle", id: "navbar-fland-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-fland-dropdown-menu">
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
               <% end %>
             </li>
             <li>

@@ -1,0 +1,38 @@
+.reviews {
+  margin: 100px 25px;
+
+  h2 {
+    color: $gray;
+    font-size: 30px;
+    margin: 0 0 50px 0;
+  }
+
+  .review {
+    margin: 0 0 25px 0;
+    .author {
+      font-weight: bold;
+      @media(min-width: 768px) {
+        display: inline-block;
+      }
+    }
+
+    .rating {
+      @media(min-width: 768px) {
+        display: inline-block;
+        margin: 0 0 0 20px;
+      }
+
+      .star-active {
+        color: $green;
+      }
+    }
+
+    .date {
+      color: lighten($gray, 50%);
+      @media(min-width: 768px) {
+        display: inline-block;
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+}

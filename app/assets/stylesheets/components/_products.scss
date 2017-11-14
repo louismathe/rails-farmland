@@ -1,0 +1,21 @@
+.products {
+  margin: 100px 25px 0 25px;
+
+  h2 {
+    color: $gray;
+    font-size: 30px;
+    margin: 0 0 50px 0;
+  }
+
+  .picture {
+    background: $green;
+    height: 350px;
+  }
+
+  .description {
+    color: $gray;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 50px 0 0 0;
+  }
+}

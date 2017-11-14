@@ -87,10 +87,10 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ### Farm page
 
-- [ ] Add product's section
+- [x] Add product's section
 - [ ] Create form
-- [ ] Add farm's section
-- [ ] Add reviews section
+- [x] Add farm's section
+- [x] Add reviews section
 
 ### Customer page
 

@@ -1,9 +1,9 @@
 .frame-cards {
   padding: 10px;
-  background-color: $gray;
+  background-color: $graycomp;
   border-radius: 5px;
-  min-height: 300px;
   min-width: 320px;
+  min-height: 200px;
   margin: 10px;
 }
 
@@ -35,8 +35,9 @@
 
 
 .card-footer {
+  font-size: 1em;
   text-align: center;
-  color: $noir;
+  color: $gray;
   border-radius:4px;
   max-width: 300;
   height: 70px;

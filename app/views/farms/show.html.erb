@@ -1,33 +1,29 @@
--<input type="hidden" id="address" value="<%= @farm.address %>">
+<input type="hidden" id="address" value="<%= @farm.address %>">
 
 <div class="farm-banner" style="background: black;">
+  <!-- Add farm image after Farm model updating -->
   <h1><%= @farm.name %></h1>
 </div>
-
-
-
 
 <div class="container">
   <div class="products">
     <h2>Products</h2>
-
-
-
     <% @farm.products.each do |product| %>
-    <h3><%= product.name.capitalize %></h3>
+
       <div class="product">
+        <h3><%= product.name.capitalize %></h3>
         <div class="row">
           <div class="col-sm-6">
             <div class="picture">
             </div>
-            <!-- image tag when migration AddPhotoToProduct -->
+            <!-- Add product image after Product model updating -->
           </div>
           <div class="col-sm-5 col-sm-offset-1">
+            <p class="price">Unit price: <strong><%= product.price %>€</strong></p>
             <div class="form">
               <%= simple_form_for @order do |f| %>
               <%= f.input :quantity %>
-              <%#= f.input :address %>
-              <!-- Add reservation date to order  -->
+              <!-- Add delivery_date after Order model updating -->
               <%= f.submit class: 'btn btn-lg btn-primary' %>
               <% end %>
             </div>
@@ -38,9 +34,6 @@
         </div>
       </div>
     <% end %>
-
-
-
 
   </div>
 </div>
@@ -54,11 +47,11 @@
       </div>
       <div class="col-sm-5 col-sm-offset-1">
         <div class="details">
-          <h3><i class="fa fa-map-marker" aria-hidden="true"></i> Location</h3>
+          <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Location</h3>
           <p><%= @farm.address %></p>
           <%= link_to 'Get directions', '#', class: 'btn btn-lg btn-default' %>
 
-          <h3><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</h3>
+          <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</h3>
           <p><%= @farm.user.email %></p>
           <%= link_to 'Contact owner', "mailto:#{@farm.user.email}", class: 'btn btn-lg btn-default' %>
         </div>
@@ -80,7 +73,6 @@
           <i class="fa fa-star-o" aria-hidden="true"></i>
         <% end %>
       </div>
-      <p class="date">25/11/2018</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
     </div>
     <div class="review">
@@ -93,7 +85,6 @@
           <i class="fa fa-star-o" aria-hidden="true"></i>
         <% end %>
       </div>
-      <p class="date">25/11/2018</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
     </div>
   </div>

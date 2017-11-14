@@ -4,31 +4,44 @@
   <h1><%= @farm.name %></h1>
 </div>
 
-  <% @farm.products.each do |product| %>
-    <%= product.name %>
-  <% end %>
+
+
 
 <div class="container">
-  <div class="product">
+  <div class="products">
     <h2>Products</h2>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="picture">
+
+
+
+    <% @farm.products.each do |product| %>
+    <h3><%= product.name.capitalize %></h3>
+      <div class="product">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="picture">
+            </div>
+            <!-- image tag when migration AddPhotoToProduct -->
+          </div>
+          <div class="col-sm-5 col-sm-offset-1">
+            <div class="form">
+              <%= simple_form_for @order do |f| %>
+              <%= f.input :quantity %>
+              <%#= f.input :address %>
+              <!-- Add reservation date to order  -->
+              <%= f.submit class: 'btn btn-lg btn-primary' %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <p class="description"><%= product.description %></p>
+          </div>
         </div>
       </div>
-      <div class="col-sm-5 col-sm-offset-1">
-        <div class="form">
-          <%= simple_form_for @farm do |f| %>
-          <%= f.input :name %>
-          <%= f.input :address %>
-          <%= f.submit class: 'btn btn-lg btn-primary' %>
-          <% end %>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </div>
+    <% end %>
+
+
+
+
   </div>
 </div>
 

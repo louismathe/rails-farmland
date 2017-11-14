@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # farms => index show (index products // new order)     do/end  shallow true
   # orders => create
   # My::orders => index
-resources :farms, only: [:index, :show]
+  resources :farms, only: [:index, :show]
+  resources :orders, only: [:new, :create]
 end
 
 

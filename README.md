@@ -61,7 +61,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ### Components
 
-- [ ] Create navbar
+- [x] Create navbar
 - [x] Create home page banner
 - [x] Create footer
 - [ ] Create card
@@ -72,7 +72,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [x] Create Farm model
 - [x] Create Product model
 - [x] Create Order model
-- [ ] Create seeds
+- [x] Create seeds
 - [ ] Add farmer option to user (Upgrade)
 - [ ] Create Review model (Upgrade)
 

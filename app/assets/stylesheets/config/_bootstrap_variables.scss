@@ -25,6 +25,10 @@ $border-radius-small: 5px;
 // Buttons
 $btn-primary-border: darken($brand-primary, 15%);
 
+// Dropdown
+$dropdown-link-color: $gray;
+
+
 .btn {
   font-size: 18px !important;
   text-transform: uppercase !important;

@@ -26,5 +26,27 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="farm">
+    <h2>About the farm</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <div id="map"></div>
+      </div>
+      <div class="col-sm-5 col-sm-offset-1">
+        <div class="details">
+          <h3><i class="fa fa-map-marker" aria-hidden="true"></i> Location</h3>
+          <p><%= @farm.address %></p>
+          <%= link_to 'Get directions', '#', class: 'btn btn-lg btn-default' %>
+
+          <h3><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</h3>
+          <p><%= @farm.user.email %></p>
+          <%= link_to 'Contact owner', "mailto:#{@farm.user.email}", class: 'btn btn-lg btn-default' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <input type="hidden" id="address" value="<%= @farm.address %>">
 <script src="https://maps.googleapis.com/maps/api/js"></script>

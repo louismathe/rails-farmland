@@ -61,7 +61,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ### Components
 
-- [ ] Create navbar
+- [x] Create navbar
 - [x] Create home page banner
 - [x] Create footer
 - [ ] Create card

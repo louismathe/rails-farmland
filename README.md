@@ -96,3 +96,10 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 - [ ] Display pending orders
 - [ ] Display past orders from youngest to oldest
+
+### Devise
+
+- [ ] Design flash alerts
+- [ ] Design login page
+- [ ] Design signup page
+- [ ] Design forgot password page

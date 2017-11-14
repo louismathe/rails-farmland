@@ -1,5 +1,19 @@
 <%= @farm.name %> <br>
 <%= @farm.address %>
+<% products = @farm.products %>
+<%= name = @farm.user.name %>
+<h3> Les produits de </h3>
+<ul>
+  <% products.each do |product| %>
+    <li>
+      <%= product.name %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
 
 <input type="hidden" id="address" value="<%= @farm.address %>">
 

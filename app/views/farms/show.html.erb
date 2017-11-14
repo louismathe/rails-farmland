@@ -48,5 +48,37 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="reviews">
+    <h2>Last reviews</h2>
+    <div class="review">
+      <p class="author">John Doe</p>
+      <div class="rating">
+        <% 2.times do %>
+          <i class="fa fa-star star-active" aria-hidden="true"></i>
+        <% end %>
+        <% 3.times do %>
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+        <% end %>
+      </div>
+      <p class="date">25/11/2018</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    </div>
+    <div class="review">
+      <p class="author">John Doe</p>
+      <div class="rating">
+        <% 2.times do %>
+          <i class="fa fa-star star-active" aria-hidden="true"></i>
+        <% end %>
+        <% 3.times do %>
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+        <% end %>
+      </div>
+      <p class="date">25/11/2018</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    </div>
+  </div>
+</div>
+
 <input type="hidden" id="address" value="<%= @farm.address %>">
 <script src="https://maps.googleapis.com/maps/api/js"></script>

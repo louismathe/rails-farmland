@@ -76,7 +76,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [x] Add photo to product
 - [x] Add name to User
 - [x] Add Photo to farm
-- [ ] Add delivery time to orders
+- [x] Add delivery time to orders
 - [ ] Add farmer option to user (Upgrade)
 - [ ] Create Review model (Upgrade)
 

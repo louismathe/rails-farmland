@@ -21,6 +21,8 @@ davidfarm = Farm.new(name: 'La ferme Tagueule', address: 'Pompignac')
 louisfarm = Farm.new(name: 'La ferme agricole', address: 'Marmande')
 nathfarm = Farm.new(name: 'La ferme a Nath', address: 'gradignan')
 
+
+
 puts "3. Assign user to farm"
 johnfarm.user = john
 paulfarm.user = paul

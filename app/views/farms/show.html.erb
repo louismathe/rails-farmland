@@ -1,8 +1,6 @@
 <input type="hidden" id="address" value="<%= @farm.address %>">
 
-<div class="farm-banner" style="background-image: url('<%= image_path @farm.photo %>');">
-  <!-- Add farm image after Farm model updating -->
-
+<div class="farm-banner" style="background-image: linear-gradient(rgba(0, 0, 0 ,0.4), rgba(0, 0, 0 ,0.3)), url('<%= image_path @farm.photo %>');">
   <h1><%= @farm.name %></h1>
 </div>
 
@@ -17,8 +15,6 @@
           <div class="col-sm-6">
             <div class="picture" style="background-image: url('<%= image_path product.photo %>');">
             </div>
-            <!-- Add product image after Product model updating -->
-
           </div>
           <div class="col-sm-5 col-sm-offset-1">
             <p class="price">Unit price: <strong><%= product.price %>€</strong></p>

@@ -1,34 +1,29 @@
 .card-container {
-  background-color: $green;
+  background-size: cover;
+  background-position: center;
   border-radius: 5px;
   min-height: 200px;
-  padding: 10px;
-  margin: 20px 0px;
+  margin: 20px 0 0 0;
+  position: relative;
 
   .card {
-    background-size: cover;
-    background-position: center center;
-    border-radius: 5px;
-    height: 190px;
+    border-radius: 5px 5px 0 0;
+    bottom: 10px;
+    left: 10px;
     margin: 0 auto;
     padding: 10px;
-    position: relative;
+    position: absolute;
+    width: 100%;
 
     h2 {
-      bottom: 0;
       color: white;
-      position: absolute;
+      font-size: 20px;
+      margin: 0;
     }
 
-
-    .info {
-      font-weight: bolder;
-      background-color: $light-gray;
-      color: $gray;
-      height: 70px;
-      margin: 10px 5px;
-      text-align: center;
-
+    span {
+      color: white;
+      font-size: 14px;
     }
   }
 }

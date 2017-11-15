@@ -12,15 +12,13 @@
     <div class="row">
       <% @farms.each do |farm| %>
         <div class="col-sm-4">
-          <div class="card-container">
+          <div class="card-container" style="background-image: linear-gradient(rgba(40, 40, 40 ,0.4), rgba(40, 40, 40 ,0.7)), url('<%= farm.photo %>');">
             <%= link_to farm_path(farm) do %>
-              <div class="card" style="background-image: url('<%= farm.photo %>');">
+              <div class="card">
                 <h2><%= farm.name %></h2>
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i>  <%= farm.address %></span>
               </div>
             <% end %>
-            <div class="info">
-              <p><%= farm.address %> + insert @order.rating</p>
-            </div>
           </div>
         </div>
       <% end %>

@@ -14,7 +14,8 @@
       <!-- Avatar with dropdown menu -->
       <div class="navigation-item">
         <div class="dropdown">
-          <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+
+          <% avatar_url = current_user.facebook_picture_url || image_path('userout.png') %>
           <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-menu", "data-toggle" => "dropdown" %>
 
           <ul class="dropdown-menu dropdown-menu-right navigation-dropdown-menu">

@@ -1,1 +1,14 @@
-// Specific CSS for your home-page
+.last-farms {
+  margin: 100px 25px;
+
+  h2 {
+    color: $gray;
+    font-size: 30px;
+    margin: 0 0 50px 0;
+  }
+
+  .all-farm-link {
+    margin-top: 50px;
+    text-align: center;
+  }
+}

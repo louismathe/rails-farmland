@@ -1,0 +1,13 @@
+.devise-wrapper {
+  align-items: center;
+  background: $light-gray;
+  display: flex;
+  justify-content: center;
+
+  .devise-container {
+    height: calc(100vh - 70px);
+    max-width: 600px;
+    padding: 25px;
+    width: 100%;
+  }
+}

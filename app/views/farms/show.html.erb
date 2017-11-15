@@ -1,8 +1,6 @@
 <input type="hidden" id="address" value="<%= @farm.address %>">
 
-<div class="farm-banner" style="background-image: url('<%= image_path @farm.photo %>');">
-  <!-- Add farm image after Farm model updating -->
-
+<div class="farm-banner" style="background-image: linear-gradient(rgba(0, 0, 0 ,0.4), rgba(0, 0, 0 ,0.3)), url('<%= image_path @farm.photo %>');">
   <h1><%= @farm.name %></h1>
 </div>
 
@@ -17,8 +15,6 @@
           <div class="col-sm-6">
             <div class="picture" style="background-image: url('<%= image_path product.photo %>');">
             </div>
-            <!-- Add product image after Product model updating -->
-
           </div>
           <div class="col-sm-5 col-sm-offset-1">
             <p class="price">Unit price: <strong><%= product.price %>€</strong></p>
@@ -32,11 +28,13 @@
                 <% end %>
               </div>
             <% else %>
-              <div class="login-alert">
-                You must login before making an order.
-                <%= link_to 'Login', new_user_session_path %>
-                <%= link_to 'Signup', new_user_registration_path %>
-                <%= link_to 'Connect with Facebook', user_facebook_omniauth_authorize_path %>
+              <div class="login-card">
+                <p>Before adding a product to your cart, you have to create an account or to login:</p>
+                <p><%= link_to 'Connect with facebook', user_facebook_omniauth_authorize_path, class: 'btn btn-primary' %></p>
+                <div class="">
+                  <%= link_to 'Login', new_user_session_path, class: 'btn btn-default' %>
+                  <%= link_to 'Signup', new_user_registration_path, class: 'btn btn-default' %>
+                </div>
               </div>
             <% end %>
           </div>
@@ -64,7 +62,7 @@
           <%= link_to 'Get directions', '#', class: 'btn btn-lg btn-default' %>
 
           <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</h3>
-          <p><%= @farm.user.email %></p>
+          <p><%= @farm.user.first_name || @farm.user.email %></p>
           <%= link_to 'Contact owner', "mailto:#{@farm.user.email}", class: 'btn btn-lg btn-default' %>
         </div>
       </div>

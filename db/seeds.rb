@@ -5,12 +5,12 @@ Farm.destroy_all
 User.destroy_all
 
 puts "1. Create user as farmer"
-john = User.new(email: 'john@gmail.com', password: '123456789', name: 'John')
-paul = User.new(email: 'paul@gmail.com', password: '123456789', name: 'Paul')
-georges = User.new(email: 'georges@gmail.com', password: '123456789', name: 'Georges')
-david = User.new(email: 'david@gmail.com', password: '123456789', name: 'David')
-sylvain = User.new(email: 'sylvain@gmail.com', password: '123456789', name: 'Louis')
-nath = User.new(email: 'nath@gmail.com', password: '123456789', name: 'Nathan')
+john = User.new(email: 'john@gmail.com', password: '123456789')
+paul = User.new(email: 'paul@gmail.com', password: '123456789')
+georges = User.new(email: 'georges@gmail.com', password: '123456789')
+david = User.new(email: 'david@gmail.com', password: '123456789')
+sylvain = User.new(email: 'sylvain@gmail.com', password: '123456789')
+nath = User.new(email: 'nath@gmail.com', password: '123456789')
 
 puts "2. Create farm"
 johnfarm = Farm.new(name: 'La ferme de John', address: 'Bordeaux', photo: 'https://images.pexels.com/photos/248880/pexels-photo-248880.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
@@ -29,12 +29,12 @@ sylvainfarm.user = sylvain
 nathfarm.user = nath
 
 puts "4. Create user as customer"
-serge = User.new(email: 'serge@gmail.com', password: '123456789', name: 'Serge')
-quentin = User.new(email: 'quentin@gmail.com', password: '123456789', name: 'Quentin')
-louis = User.new(email: 'louis@gmail.com', password: '123456789', name: 'Louis')
-hugues = User.new(email: 'hugues@gmail.com', password: '123456789', name: 'Hugues')
-valou = User.new(email: 'valou@gmail.com', password: '123456789', name: 'Valentin')
-seb = User.new(email: 'seb@gmail.com', password: '123456789', name: 'Seb')
+serge = User.new(email: 'serge@gmail.com', password: '123456789')
+quentin = User.new(email: 'quentin@gmail.com', password: '123456789')
+louis = User.new(email: 'louis@gmail.com', password: '123456789')
+hugues = User.new(email: 'hugues@gmail.com', password: '123456789')
+valou = User.new(email: 'valou@gmail.com', password: '123456789')
+seb = User.new(email: 'seb@gmail.com', password: '123456789')
 
 
 puts "5. Create a product"

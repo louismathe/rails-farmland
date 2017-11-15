@@ -18,7 +18,7 @@
           </div>
           <div class="col-sm-5 col-sm-offset-1">
             <p class="price">Unit price: <strong><%= product.price %>€</strong></p>
-            <% if user_signed_in? %>
+            <% if user_signed_in?                
               <div class="form">
                 <%= simple_form_for @order do |f| %>
                 <%= f.hidden_field :product_id, value: product.id %>

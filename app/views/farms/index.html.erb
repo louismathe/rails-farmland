@@ -17,6 +17,7 @@
 <% end %>
 
 <div class="container">
+  <div class="title">Find the best products around you !</div>
   <div class="row">
     <% @farms.each do |farm| %>
       <div class="col-sm-4">
@@ -27,7 +28,7 @@
             </div>
           <% end %>
           <div class="info">
-            <p><%= farm.address %> + insert @order.rating</p>
+            <p><%= farm.address %></p>
           </div>
         </div>
       </div>

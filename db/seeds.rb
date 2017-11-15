@@ -13,11 +13,11 @@ sylvain = User.new(email: 'sylvain@gmail.com', password: '123456789')
 nath = User.new(email: 'nath@gmail.com', password: '123456789')
 
 puts "2. Create farm"
-johnfarm = Farm.new(name: 'La ferme de John', address: 'Bordeaux', photo: 'https://images.pexels.com/photos/248880/pexels-photo-248880.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
+johnfarm = Farm.new(name: 'La ferme de John', address: '107 cours Balguerie Stuttenberg, Bordeaux', photo: 'https://images.pexels.com/photos/248880/pexels-photo-248880.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
 paulfarm = Farm.new(name: 'La ferme de Paul', address: 'Talence', photo: 'https://3di6ns1klfxg1uoj71eeb8rr-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/photo-farm.jpg')
 georgesfarm = Farm.new(name: 'La ferme de Georges', address: 'Pessac', photo: 'https://i.pinimg.com/736x/c1/ce/df/c1cedf353ad23119cfda89c521796fe4--urban-agriculture-urban-farming.jpg')
 davidfarm = Farm.new(name: 'La ferme Tagueule', address: 'Pompignac', photo: 'https://images.pexels.com/photos/175389/pexels-photo-175389.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
-sylvainfarm = Farm.new(name: 'La ferme agricole', address: 'Marmande', photo: 'https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
+sylvainfarm = Farm.new(name: 'La ferme agricole', address: 'Floirac', photo: 'https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
 nathfarm = Farm.new(name: 'La ferme a Nath', address: 'gradignan', photo: 'https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
 
 puts "3. Assign user to farm"

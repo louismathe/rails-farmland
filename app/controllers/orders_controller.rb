@@ -7,10 +7,14 @@ class OrdersController < ApplicationController
     @order.product = @product
     @order.user = @user
     if @order.save
-      redirect_to '#'
+      redirect_to orders_path
     else
       render '#'
     end
+  end
+
+  def index
+    @orders = Order.where(user: current_user)
   end
 
   private

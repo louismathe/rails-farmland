@@ -17,21 +17,21 @@
 <% end %>
 
 <div class="container">
-  <div class="title">Find the best products around you !</div>
-  <div class="row">
-    <% @farms.each do |farm| %>
-      <div class="col-sm-4">
-        <div class="card-container">
-          <%= link_to farm_path(farm) do %>
-            <div class="card" style="background-image: url('<%= farm.photo %>');">
-              <h2><%= farm.name %></h2>
-            </div>
-          <% end %>
-          <div class="info">
-            <p><%= farm.address %></p>
+  <div class="farms">
+    <h1>Find the best products around you!</h1>
+    <div class="row">
+      <% @farms.each do |farm| %>
+        <div class="col-sm-4">
+          <div class="card-container" style="background-image: linear-gradient(rgba(40, 40, 40 ,0.4), rgba(40, 40, 40 ,0.7)), url('<%= farm.photo %>');">
+            <%= link_to farm_path(farm) do %>
+              <div class="card">
+                <h2><%= farm.name %></h2>
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i>  <%= farm.address %></span>
+              </div>
+            <% end %>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

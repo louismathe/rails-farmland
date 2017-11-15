@@ -37,7 +37,7 @@ quentin = User.new(email: 'quentin@gmail.com', password: '123456789')
 louis = User.new(email: 'louis@gmail.com', password: '123456789')
 
 puts "5. Create a product"
-pomme = Product.new(name: 'pomme', price: 5)
+pomme = Product.new(name: 'pomme', price: 5, photo: 'https://www.messortiesculture.com/storage/tourcovers/1840.jpg?1497763205')
 peche = Product.new(name: 'peche', price: 1)
 poire = Product.new(name: 'poire', price: 11)
 

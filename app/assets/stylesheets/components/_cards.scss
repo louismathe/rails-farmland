@@ -1,47 +1,36 @@
-.frame-cards {
-  padding: 10px;
-  background-color: $graycomp;
-  border-radius: 5px;
-  min-width: 320px;
-  min-height: 200px;
-  margin: 10px;
-}
-
-.cards {
-  background: linear-gradient(135deg,
-    rgba(0,0,0,0.8) 0%,
-    rgba(0,0,0,0.3) 50%),
-  url("https://unsplash.it/300/250");
-  position: relative;
-  height: 190px;
-  width: 300px;
-  background-size: cover;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 0 auto;
-
-}
-.cards-category {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.cards-description {
-  color: white;
-  position: absolute;
-  bottom: 0px;
-}
-
-
-.card-footer {
-  font-size: 1em;
-  text-align: center;
-  color: $gray;
-  border-radius:4px;
-  max-width: 300;
-  height: 70px;
-  margin: 10px 5px;
+.card-container {
   background-color: $light-gray;
-}
+  border-radius: 5px;
+  margin: 10px;
+  min-height: 200px;
+  padding: 10px;
 
+  .card {
+    background: linear-gradient(135deg,
+      rgba($gray, 0.8) 0%,
+      rgba($gray, 0.3) 50%),
+      url("https://unsplash.it/300/250");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+    height: 190px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+
+    h2 {
+      bottom: 0;
+      color: white;
+      position: absolute;
+    }
+
+    .info {
+      background-color: $light-gray;
+      border-radius: 4px;
+      color: $gray;
+      height: 70px;
+      margin: 10px 5px;
+      text-align: center;
+    }
+  }
+}

@@ -6,4 +6,27 @@
   </div>
 </div>
 
-
+<div class="container">
+  <div class="last-farms">
+    <h2>Last farms</h2>
+    <div class="row">
+      <% @farms.each do |farm| %>
+        <div class="col-sm-4">
+          <div class="card-container">
+            <%= link_to farm_path(farm) do %>
+              <div class="card" style="background-image: url('<%= farm.photo %>');">
+                <h2><%= farm.name %></h2>
+              </div>
+            <% end %>
+            <div class="info">
+              <p><%= farm.address %> + insert @order.rating</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="all-farm-link">
+      <%= link_to 'Browse all farms', farms_path, class: 'btn btn-lg btn-primary'%>
+    </div>
+  </div>
+</div>

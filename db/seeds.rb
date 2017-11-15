@@ -87,7 +87,7 @@ peche.save
 louisorder.save
 davidfarm.save
 louisfarm.save
-nath.save
+nathfarm.save
 
 #### Add default photo to farm, ex :
 # goo.gl/S2K83Y

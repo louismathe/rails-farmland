@@ -28,11 +28,13 @@
                 <% end %>
               </div>
             <% else %>
-              <div class="login-alert">
-                You must login before making an order.
-                <%= link_to 'Login', new_user_session_path %>
-                <%= link_to 'Signup', new_user_registration_path %>
-                <%= link_to 'Connect with Facebook', user_facebook_omniauth_authorize_path %>
+              <div class="login-card">
+                <p>Before adding a product to your cart, you have to create an account or to login:</p>
+                <p><%= link_to 'Connect with facebook', user_facebook_omniauth_authorize_path, class: 'btn btn-primary' %></p>
+                <div class="">
+                  <%= link_to 'Login', new_user_session_path, class: 'btn btn-default' %>
+                  <%= link_to 'Signup', new_user_registration_path, class: 'btn btn-default' %>
+                </div>
               </div>
             <% end %>
           </div>
@@ -60,7 +62,7 @@
           <%= link_to 'Get directions', '#', class: 'btn btn-lg btn-default' %>
 
           <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</h3>
-          <p><%= @farm.user.email %></p>
+          <p><%= @farm.user.first_name || @farm.user.email %></p>
           <%= link_to 'Contact owner', "mailto:#{@farm.user.email}", class: 'btn btn-lg btn-default' %>
         </div>
       </div>

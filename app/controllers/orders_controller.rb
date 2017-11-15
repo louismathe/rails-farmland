@@ -2,7 +2,6 @@ class OrdersController < ApplicationController
   before_action :find_product, only: [:create]
   before_action :find_user, only: [:create]
 
-
   def create
     @order = Order.new(order_params)
     @order.product = @product

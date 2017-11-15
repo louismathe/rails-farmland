@@ -4,9 +4,11 @@
       <div class="col-sm-4">
         <div class="card-container">
           <%= link_to farm_path(farm) do %>
-            <div class="card" style="background-image: url('https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb');">
-              <h2><%= farm.name %></h2>
-            </div>
+            <div class="cards" style="background-image: url('<%= farm.photo %>');">
+               <div class="cards-description">
+                  <h2><%= farm.name %></h2>
+                </div>
+              </div>
           <% end %>
           <div class="info">
             <p><%= farm.address %> + insert @order.rating</p>

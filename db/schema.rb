@@ -21,9 +21,7 @@ ActiveRecord::Schema.define(version: 20171114175147) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "product_id"
     t.text     "photo"
-    t.index ["product_id"], name: "index_farms_on_product_id", using: :btree
     t.index ["user_id"], name: "index_farms_on_user_id", using: :btree
   end
 
@@ -71,12 +69,10 @@ ActiveRecord::Schema.define(version: 20171114175147) do
     t.string   "last_name"
     t.string   "token"
     t.datetime "token_expiry"
-    t.string   "name"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "farms", "products"
   add_foreign_key "farms", "users"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"

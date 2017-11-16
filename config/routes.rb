@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :farms, only: [:index, :show]
-  resources :orders, only: [:new, :create, :index]
+  resources :orders, only: [:new, :create, :index, :show, :update, :edit]
 end

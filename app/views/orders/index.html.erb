@@ -15,6 +15,13 @@
               <div class="col-sm-8">
                 <p><%= order.product.description %></p>
               </div>
+              <div style="border: red 1px solid">
+                <%= simple_form_for(order) do |f| %>
+                  <%= f.input :rating %>
+                  <%= f.input :review %>
+                  <%= f.submit class: 'btn btn-lg btn-primary' %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>

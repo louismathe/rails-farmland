@@ -77,8 +77,7 @@
         <div class="details">
           <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Location</h3>
           <p><%= @farm.address %></p>
-          <%= link_to 'Get directions', '#', class: 'btn btn-lg btn-default' %>
-
+          <%= link_to 'Get directions', "https://www.google.com/maps/dir/?api=1&destination=#{@farm.address}", class: 'btn btn-lg btn-default', target: '_blank' %>
           <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</h3>
           <p><%= @farm.user.first_name || @farm.user.email %></p>
           <%= link_to 'Contact owner', "mailto:#{@farm.user.email}", class: 'btn btn-lg btn-default' %>

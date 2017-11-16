@@ -117,7 +117,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
     - [x] Product picture
     - [x] form add date delivery
     - [x] Show Product price
-    - [ ] ( Add google map itinerary link )
+    - [x] ( Add google map itinerary link )
     - [x] Delete review date
     - [ ] Iterate on reviews linked to the farm
     - [x] Google Map Api key

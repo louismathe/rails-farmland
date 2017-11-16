@@ -1,3 +1,6 @@
+<% content_for(:title) do%>
+  <%= "Farmland - #{@farm.name}" %>
+<% end %>
 <input type="hidden" id="address" value="<%= @farm.address %>">
 
 <div class="farm-banner" style="background-image: linear-gradient(rgba(0, 0, 0 ,0.4), rgba(0, 0, 0 ,0.3)), url('<%= image_path @farm.photo %>');">

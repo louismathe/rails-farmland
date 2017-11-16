@@ -26,5 +26,12 @@
         color: $green;
       }
     }
+
+    .date {
+      color: lighten($gray, 30%);
+      @media(min-width: 768px) {
+        margin: 0 0 0 20px;
+      }
+    }
   }
 }

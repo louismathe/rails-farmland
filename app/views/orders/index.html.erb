@@ -31,6 +31,7 @@
                       <%= f.input :rating %>
                     </div>
                     <div class="col-sm-12">
+                      <%= f.hidden_field :updated_at %>
                       <% if params[:id] && order.id == params[:id].to_i %>
                         <%= f.input :review, input_html: {value: @review} %>
                       <% else %>

@@ -27,7 +27,7 @@
                 <%= f.hidden_field :product_id, value: product.id %>
                 <%= f.input :quantity %>
                 <%= f.input :delivery_time %>
-                <%= f.submit class: 'btn btn-lg btn-primary' %>
+                <%= f.submit class: 'btn btn-lg btn-primary', submit_html: { value: 'toto' } %>
                 <% end %>
               </div>
             <% else %>
@@ -103,6 +103,7 @@
             <i class="fa fa-star-o" aria-hidden="true"></i>
           <% end %>
         </div>
+        <span class="date"><%= order.updated_at.strftime('%D') %></span>
         <p><%= order.review %></p>
       </div>
     <% end %>

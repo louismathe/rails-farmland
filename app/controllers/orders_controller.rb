@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :find_product, only: [:create]
   before_action :find_user, only: [:create]
+  before_action :find_order, only: [:update]
 
   def create
     @order = Order.new(order_params)
@@ -18,7 +19,25 @@ class OrdersController < ApplicationController
     @orders = Order.where(user: current_user)
   end
 
+  def update
+    if @order.update(review_params)
+      redirect_to orders_path
+    else
+      @orders = Order.where(user: current_user)
+      @review = params[:order][:review]
+      render :index
+    end
+  end
+
   private
+
+  def find_order
+    @order = Order.find(params[:id])
+  end
+
+  def review_params
+    params.require(:order).permit(:rating, :review)
+  end
 
   def order_params
     params.require(:order).permit(:quantity, :delivery_time, :product_id)

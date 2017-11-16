@@ -19,7 +19,7 @@
               <div class="form-review" >
                 <%= simple_form_for(order) do |f| %>
                   <%= f.input :rating %>
-                  <% if !params[:id].nil? && order.id == params[:id].to_i %>
+                  <% if params[:id] && order.id == params[:id].to_i %>
                     <%= f.input :review, input_html: {value: @review} %>
                   <% else %>
                     <%= f.input :review %>

@@ -25,7 +25,6 @@ class OrdersController < ApplicationController
     else
       @orders = Order.where(user: current_user)
       @review = params[:order][:review]
-      # raise
       render :index
     end
   end

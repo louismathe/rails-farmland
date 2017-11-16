@@ -7,7 +7,10 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.product = @product
     @order.user = @user
+
     @farm = @order.product.farm
+    @products = Product.where(farm_id: @farm)
+    @orders = Order.where(product_id: @products)
     if @order.save
       redirect_to orders_path
     else

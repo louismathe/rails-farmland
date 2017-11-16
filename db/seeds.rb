@@ -75,8 +75,8 @@ sergeorder.save
 quentinorder = Order.new(quantity: 1, delivery_time: '27/11/2017')
 quentinorder.product = poire
 quentinorder.user = quentin
-quentinorder.rating = 2
-quentinorder.review = "c'est nul"
+quentinorder.rating = 3
+quentinorder.review = "I was hoping for more flavor, like I used to get when I bought these in Florida, These weren't very good."
 
 paul.save
 paulfarm.save
@@ -88,7 +88,7 @@ louisorder = Order.new(quantity: 4, delivery_time: '17/10/2017')
 louisorder.product = peche
 louisorder.user = louis
 louisorder.rating = 3
-louisorder.review = "c'est pas top"
+louisorder.review = "I wish I could rave about this--the idea is really smart, and my 8yo loves it. But we've got multiple problems. First, the cover for the dip container doesn't seal very well, so more than once junior's lunchbox has come home with nut butter, etc, smeared inside. And second, the plastic used for the main body is flimsy. I ordered this barely one month ago, and it's already cracked. Because my son likes it so much we'll keep using it until it's no longer feasible, but I'm really disappointed."
 
 georges.save
 georgesfarm.save
@@ -100,7 +100,7 @@ huguesorder = Order.new(quantity: 11, delivery_time: '20/10/2017')
 huguesorder.product = banane
 huguesorder.user = hugues
 huguesorder.rating = 5
-huguesorder.review = 'hyper cool les bananes'
+huguesorder.review = 'This product holds a near-perfect portion of celery and peanut butter/hummus/whatever for a snack, and everyone who sees it comments on how cute it is. The bottom portion/section holds the celery, the top holds the pb/hummus/whatever. Two problems: 1. the top portion (which holds the pb/hummus/whatever) does not snap or twist tightly onto the bottom portion so it does not always stay in place, and 2. when you take the lid of the top portion off.'
 
 david.save
 davidfarm.save
@@ -111,8 +111,8 @@ huguesorder.save
 valouorder = Order.new(quantity: 12, delivery_time: '27/12/2017')
 valouorder.product = tomate
 valouorder.user = valou
-valouorder.rating = 5
-valouorder.review = "Super ces tomates"
+valouorder.rating = 2
+valouorder.review = "I am giving this as a gift to one of my daughters who is always on the go. It looks like a terrific way to carry apples and peanut butter in a neat and cute container !"
 
 sylvain.save
 sylvainfarm.save
@@ -123,8 +123,8 @@ valouorder.save
 seborder = Order.new(quantity: 3, delivery_time: '11/11/2017')
 seborder.product = courgette
 seborder.user = seb
-seborder.rating = 1
-seborder.review = "beurk"
+seborder.rating = 0
+seborder.review = "Cute, but if your buying for your child, it’s difficult to open, even for an adult. My kindergartener can’t open either piece."
 
 nath.save
 nathfarm.save

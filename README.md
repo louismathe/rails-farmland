@@ -64,7 +64,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [x] Create navbar
 - [x] Create home page banner
 - [x] Create footer
-- [ ] Create card
+- [x] Create card
 
 ### Models
 
@@ -77,22 +77,21 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [x] Add name to User
 - [x] Add Photo to farm
 - [x] Add delivery time to orders
-- [ ] Add farmer option to user (Upgrade)
-- [ ] Create Review model (Upgrade)
+- [ ] Add new/create farm for user (Upgrade)
 
 ### Homepage
 
-- [ ] Display best reviewed farms
+- [ ] Display best reviewed farms (Upgrade)
 
 ### Farm index
 
-- [ ] Display maps with farms around
-- [ ] Display farms from closest to furthest
+- [ ] Display maps with farms around // ask user for location
+- [ ] Link index map to farms cards
 
 ### Farm page
 
 - [x] Add product's section
-- [ ] Create form
+- [x] Create form
 - [x] Add farm's section
 - [x] Add reviews section
 
@@ -100,22 +99,29 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 - [ ] Display pending orders
 - [ ] Display past orders from youngest to oldest
+- [ ] Create a review + rating:
+  - [ ]Add a form for each order on profile page (avec hidden input Time.now) for past orders
+  - [ ] Sort orders by status (pending/done)
 
 ### Devise
 
 - [ ] Design flash alerts
-- [ ] Design login page
-- [ ] Design signup page
-- [ ] Design forgot password page
+- [x] Design login page
+- [x] Design signup page
+- [x] Design forgot password page
 
-# As a user I can
+### As a user I can
 - [x] See all farmers
 - [ ] Show a specific farmer:
     - [x] Farmer picture banner
     - [x] Product picture
     - [x] form add date delivery
     - [x] Show Product price
-    - [ ] ( Add google map link )
+    - [ ] ( Add google map itinerary link )
     - [x] Delete review date
-    - [ ] Iterate on reviews
-    - [ ] Google Map Api key
+    - [ ] Iterate on reviews linked to the farm
+    - [x] Google Map Api key
+
+### Add Mailer
+  - [ ] Subscribe
+  - [ ] New order

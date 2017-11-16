@@ -85,7 +85,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ### Farm index
 
-- [ ] Display maps with farms around // ask user for location
+- [x] Display maps with farms around // ask user for location
 - [ ] Link index map to farms cards
 
 ### Farm page

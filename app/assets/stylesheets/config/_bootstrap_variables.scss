@@ -31,6 +31,8 @@ $btn-default-color: $brand-primary;
 // Dropdown
 $dropdown-link-color: $gray;
 
+// Panel
+$panel-success-heading-bg: lighten($brand-primary, 40%);
 
 .btn {
   font-size: 18px !important;

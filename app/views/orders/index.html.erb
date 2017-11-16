@@ -3,29 +3,45 @@
     <h1>My orders</h1>
     <div class="row">
       <% @orders.each do |order| %>
-        <div class="order panel panel-default">
+        <div class="order panel panel-success">
           <div class="panel-heading">
-            <h2 class="panel-title"><%= order.quantity %>x <%= order.product.name %><span class="pull-right"><%= order.created_at %></span></h2>
+            <h2 class="panel-title"><%= order.product.name %><span class="pull-right"><%= order.created_at.strftime('%D') %></span></h2>
           </div>
           <div class="panel-body">
             <div class="row">
               <div class="col-sm-4">
-                <div class="order-image" style="background-image: url('<%= order.product.photo %>');"></div>
+                <%= link_to farm_path(order.product.farm) do %>
+                  <div class="order-image" style="background-image: url('<%= order.product.photo %>');"></div>
+                <% end %>
               </div>
               <div class="col-sm-8">
-                <p><%= order.product.description %></p>
+                <ul class="list-group">
+                  <li class="list-group-item">Total price: <span class="pull-right"><%= order.quantity * order.product.price %>€</span></li>
+                  <li class="list-group-item">Order date: <span class="pull-right"><%= order.delivery_time.strftime('%D') %></span></li>
+                  <li class="list-group-item">Quantity:<span class="pull-right"><%= order.quantity %></span></li>
+                </ul>
+                <div class="col-sm-4 col-sm-offset-4">
+                  <%= link_to 'Add a review', '#', class: 'btn btn-primary button-review' %>
+                </div>
               </div>
-              <button class="button-review">Add a review</button>
-              <div class="form-review" >
-                <%= simple_form_for(order) do |f| %>
-                  <%= f.input :rating %>
-                  <% if params[:id] && order.id == params[:id].to_i %>
-                    <%= f.input :review, input_html: {value: @review} %>
-                  <% else %>
-                    <%= f.input :review %>
+              <div class="col-sm-12">
+                <div class="form-review" >
+                  <%= simple_form_for(order) do |f| %>
+                    <div class="col-sm-4">
+                      <%= f.input :rating %>
+                    </div>
+                    <div class="col-sm-12">
+                      <% if params[:id] && order.id == params[:id].to_i %>
+                        <%= f.input :review, input_html: {value: @review} %>
+                      <% else %>
+                        <%= f.input :review %>
+                      <% end %>
+                    </div>
+                    <div class="col-sm-12">
+                      <%= f.submit class: 'btn btn-lg btn-primary' %>
+                    </div>
                   <% end %>
-                  <%= f.submit class: 'btn btn-lg btn-primary' %>
-                <% end %>
+                </div>
               </div>
             </div>
           </div>

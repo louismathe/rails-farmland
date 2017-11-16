@@ -10,6 +10,8 @@ class FarmsController < ApplicationController
 
   def show
     @farm = Farm.find(params[:id])
+    @products = Product.where(farm_id: @farm)
+    @orders = Order.where(product_id: @products)
     @order = Order.new
     @farm_coordinates = { lat: @farm.latitude, lng: @farm.longitude }
     @hash = Gmaps4rails.build_markers(@farm) do |farm, marker|

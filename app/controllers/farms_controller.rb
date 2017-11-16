@@ -4,6 +4,7 @@ class FarmsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@farms) do |farm, marker|
       marker.lat farm.latitude
       marker.lng farm.longitude
+      marker.infowindow render_to_string(partial: '/components/map_box', locals: { farm: farm })
     end
   end
 

@@ -1,0 +1,6 @@
+<div class="map-box">
+  <h3><%= farm.name %></h3>
+  <p><%= farm.address %></p>
+  <%= image_tag farm.photo %>
+  <%= link_to "Get details", farm_path(farm), class: "btn btn-primary" %>
+</div>

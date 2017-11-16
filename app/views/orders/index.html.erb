@@ -21,11 +21,11 @@
                   <li class="list-group-item">Quantity:<span class="pull-right"><%= order.quantity %></span></li>
                 </ul>
                 <div class="col-sm-4 col-sm-offset-4">
-                  <%= link_to 'Add a review', '#', class: 'btn btn-primary button-review' %>
+                  <%= link_to 'Add a review', "#collapse#{order.created_at.strftime('%Y%m%dT%H%M%S')}", 'aria-expanded': 'false', 'aria-controls': 'collapseExample', 'data-toggle': 'collapse', role: 'button', class: 'btn btn-primary button-review' %>
                 </div>
               </div>
               <div class="col-sm-12">
-                <div class="form-review" >
+                <div class="form-review collapse" id="<%="collapse#{order.created_at.strftime('%Y%m%dT%H%M%S')}"%>">
                   <%= simple_form_for(order) do |f| %>
                     <div class="col-sm-4">
                       <%= f.input :rating %>

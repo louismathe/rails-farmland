@@ -23,6 +23,9 @@ class OrdersController < ApplicationController
     if @order.update(review_params)
       redirect_to orders_path
     else
+      @orders = Order.where(user: current_user)
+      @review = params[:order][:review]
+      # raise
       render :index
     end
   end

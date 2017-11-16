@@ -15,10 +15,15 @@
               <div class="col-sm-8">
                 <p><%= order.product.description %></p>
               </div>
-              <div style="border: red 1px solid">
+              <button class="button-review">Add a review</button>
+              <div class="form-review" >
                 <%= simple_form_for(order) do |f| %>
                   <%= f.input :rating %>
-                  <%= f.input :review %>
+                  <% if !params[:id].nil? && order.id == params[:id].to_i %>
+                    <%= f.input :review, input_html: {value: @review} %>
+                  <% else %>
+                    <%= f.input :review %>
+                  <% end %>
                   <%= f.submit class: 'btn btn-lg btn-primary' %>
                 <% end %>
               </div>

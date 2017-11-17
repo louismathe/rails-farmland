@@ -36,10 +36,13 @@ hugues = User.new(email: 'hugues@gmail.com', password: '123456789')
 valou = User.new(email: 'valou@gmail.com', password: '123456789')
 seb = User.new(email: 'seb@gmail.com', password: '123456789')
 
-
 puts "5. Create a product"
 pomme = Product.new(name: 'Fresho Apple - Shimla', description: 'Shimla Apples are cleanness, flavor and mild fragrance. These are essentially sourced from the farmers of Shimla who produce these at well-equipped hygienic farms. These are identified for their crunchy texture and sweet as well as slightly tasty flavor.
 Product image shown is for representation purpose only, the actually product may vary based on season, produce & availability.', price: 1, photo: 'https://images.pexels.com/photos/162806/apple-fruit-fruits-delicious-162806.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
+
+citron = Product.new(name: 'Lemons - Australian Certified Organic', description: 'Add abundant flavor to a variety of dishes with a simple drizzle of lemon', price: 3, photo: 'https://images.pexels.com/photos/129574/pexels-photo-129574.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb')
+
+cerise = Product.new(name: 'Sweet Mountain Bing Cherries', description: 'These big, lustrous, long-stemmed cherries are grown in the rarefied air of a few high-altitude orchards in Washington state, where clear starry nights and cold mountain snowmelt produce sweeter, crisper, more delicious cherries than any you\'ve ever tasted. We select only the top few percent that meet Hale\'s stringent standards for quality.  Specially cushion-packed and rushed direct to your door in July. ', price: 8, photo: 'https://images.pexels.com/photos/175727/pexels-photo-175727.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb')
 
 peche = Product.new(name: 'Peaches - “Ugly” Aussie Small Yellow Peaches', description: 'Our “ugly” produce is the produce that doesn’t necessarily meet the regular customer’s idea of perfection. A few lumps and bumps here, a spot or two there. We still think they’re beautiful though.', price: 1, photo: 'https://images.unsplash.com/photo-1504577089374-ed8ee92673bb?auto=format&fit=crop&w=2100&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D')
 
@@ -58,6 +61,8 @@ peche.farm = georgesfarm
 banane.farm = davidfarm
 tomate.farm = sylvainfarm
 courgette.farm = nathfarm
+citron.farm = nathfarm
+cerise.farm = nathfarm
 
 puts "7. Create an order with customer + product"
 sergeorder = Order.new(quantity: 7, delivery_time: '27/10/2017')
@@ -75,7 +80,7 @@ sergeorder.save
 quentinorder = Order.new(quantity: 1, delivery_time: '27/11/2017')
 quentinorder.product = poire
 quentinorder.user = quentin
-quentinorder.rating = 3
+quentinorder.rating = 4
 quentinorder.review = "I was hoping for more flavor, like I used to get when I bought these in Florida, These weren't very good."
 
 paul.save
@@ -123,11 +128,32 @@ valouorder.save
 seborder = Order.new(quantity: 3, delivery_time: '11/11/2017')
 seborder.product = courgette
 seborder.user = seb
-seborder.rating = 0
+seborder.rating = 1
 seborder.review = "Cute, but if your buying for your child, it’s difficult to open, even for an adult. My kindergartener can’t open either piece."
+
+valorder = Order.new(quantity: 1, delivery_time: '07/11/2017')
+valorder.product = citron
+valorder.user = valou
+valorder.rating = 4
+valorder.review = "Wooooooh really nice, I love lemon yolotrolololol"
+
+sergorder = Order.new(quantity: 3, delivery_time: '07/11/2017')
+sergorder.product = cerise
+sergorder.user = serge
+sergorder.rating = 5
+sergorder.review = "Many Thanks Farmland for those delicious cherries :D"
+
+
+
 
 nath.save
 nathfarm.save
 seb.save
+
 courgette.save
+cerise.save
+citron.save
+
+sergorder.save
 seborder.save
+valorder.save

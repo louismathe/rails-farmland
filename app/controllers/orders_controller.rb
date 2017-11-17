@@ -33,6 +33,7 @@ class OrdersController < ApplicationController
   end
 
   def update
+    index
     if @order.update(review_params)
       redirect_to orders_path
     else

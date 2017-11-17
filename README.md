@@ -72,17 +72,21 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 - [x] Add ajax to order#delete
 
 ### Order model
-- [ ] Validates minimum length to review
-- [ ] Change rating input into select (*with allowed values in const*)
+- [x] Validates minimum length to review
+- [x] Change rating input into select (*with allowed values in const*)
 - [ ] Validates delivery_time (*in case date is in the past*)
 
 ### Seeds
 
-- [ ] Add multiple products for each farm
-- [ ] Add farms and orders for certain users
+- [x] Add multiple products for each farm
+- [x] Add farms and orders for certain users
 
 ### Mailer
-  - [ ] Send a mail for each new order
+  - [x] Send a mail for each new order
+  - [ ] Text version
+
+### Review
+- [ ] Hide order without rating/review on farm page
 
 ### Upgrades
 

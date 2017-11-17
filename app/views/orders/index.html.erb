@@ -54,24 +54,7 @@
                 </div>
               </div>
               <div class="col-sm-12">
-                <div class="form-review collapse" id="<%="collapse-#{order.id}"%>">
-                  <%= simple_form_for(order) do |f| %>
-                    <div class="col-sm-4">
-                      <%= f.input :rating %>
-                    </div>
-                    <div class="col-sm-12">
-                      <%= f.hidden_field :updated_at %>
-                      <% if params[:id] && order.id == params[:id].to_i %>
-                        <%= f.input :review, input_html: {value: @review} %>
-                      <% else %>
-                        <%= f.input :review %>
-                      <% end %>
-                    </div>
-                    <div class="col-sm-12">
-                      <%= f.submit class: 'btn btn-lg btn-primary' %>
-                    </div>
-                  <% end %>
-                </div>
+                <%= render 'edit_form', order: order %>
               </div>
             </div>
           </div>

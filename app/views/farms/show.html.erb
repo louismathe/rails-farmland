@@ -20,16 +20,8 @@
           </div>
           <div class="col-sm-5 col-sm-offset-1">
             <p class="price">Unit price: <strong><%= product.price %>€</strong></p>
-
             <% if user_signed_in? %>
-              <div class="form">
-                <%= simple_form_for @order do |f| %>
-                <%= f.hidden_field :product_id, value: product.id %>
-                <%= f.input :quantity %>
-                <%= f.input :delivery_time %>
-                <%= f.submit class: 'btn btn-lg btn-primary', submit_html: { value: 'toto' } %>
-                <% end %>
-              </div>
+              <%= render 'orders/new_form', product: product %>
             <% else %>
               <div class="login-card">
                 <p>Before adding a product to your cart, you have to create an account or to login:</p>
@@ -47,7 +39,6 @@
         </div>
       </div>
     <% end %>
-
   </div>
 </div>
 
@@ -56,23 +47,8 @@
     <h2>About the farm</h2>
     <div class="row">
       <div class="col-sm-6">
-        <div id="map" style="width: 100%; height: 600px;"></div>
-        <% content_for(:after_js) do %>
-          <script>
-            var handler = Gmaps.build('Google');
-            handler.buildMap({ internal: { id: 'map' } }, function() {
-              markers = handler.addMarkers(<%= raw @hash.to_json %>);
-              handler.bounds.extendWith(markers);
-              handler.fitMapToBounds();
-              if (markers.length == 0) {
-                handler.getMap().setZoom(2);
-              } else if (markers.length == 1) {
-                handler.getMap().setZoom(14);
-              }
-            });
-          </script>
-        <% end %>
-
+        <div id="map" style="width: 100%; height: 600px;">
+        </div>
       </div>
 
       <div class="col-sm-5 col-sm-offset-1">
@@ -116,4 +92,8 @@
   <script>
     const coord = <%= raw @farm_coordinates.to_json %>;
   </script>
+<% end %>
+
+<% content_for(:after_js) do %>
+  <%= render 'farm_map' %>
 <% end %>

@@ -29,7 +29,7 @@ sylvainfarm.user = sylvain
 nathfarm.user = nath
 
 puts "4. Create user as customer"
-serge = User.new(email: 'serge@gmail.com', password: '123456789')
+serge = User.new(email: 'sylvain@volpeo.fr', password: '123456789')
 quentin = User.new(email: 'quentin@gmail.com', password: '123456789')
 louis = User.new(email: 'louis@gmail.com', password: '123456789')
 hugues = User.new(email: 'hugues@gmail.com', password: '123456789')
@@ -143,6 +143,13 @@ sergorder.user = serge
 sergorder.rating = 5
 sergorder.review = "Many Thanks Farmland for those delicious cherries :D"
 
+sylvainorder = Order.new(quantity: 3, delivery_time: '21/11/2017')
+sylvainorder.product = courgette
+sylvainorder.user = serge
+sylvainorder.rating = 1
+sylvainorder.review = "Cute, but if your buying for your child, it’s difficult to open, even for an adult. My kindergartener can’t open either piece."
+
+
 nath.save
 nathfarm.save
 seb.save
@@ -154,3 +161,4 @@ citron.save
 sergorder.save
 seborder.save
 valorder.save
+sylvainorder.save

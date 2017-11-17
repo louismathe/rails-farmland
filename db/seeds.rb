@@ -69,7 +69,7 @@ sergeorder = Order.new(quantity: 7, delivery_time: '27/10/2017')
 sergeorder.product = pomme
 sergeorder.user = serge
 sergeorder.rating = 4
-sergeorder.review = "c'est cool"
+sergeorder.review = "Loaded with all kinds of nutrients, apples are a great snack or food staple. Sent these to a family member during Sandy. He loved them. Crisp, tasty and a great size. Will order from this Seller again."
 
 john.save
 johnfarm.save
@@ -142,9 +142,6 @@ sergorder.product = cerise
 sergorder.user = serge
 sergorder.rating = 5
 sergorder.review = "Many Thanks Farmland for those delicious cherries :D"
-
-
-
 
 nath.save
 nathfarm.save

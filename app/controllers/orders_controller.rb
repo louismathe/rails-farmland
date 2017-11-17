@@ -22,16 +22,8 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.where(user: current_user)
-    @pending_orders = []
-    @past_orders = []
-
-    @orders.each do |order|
-      if order.pending?
-        @pending_orders << order
-      else
-        @past_orders << order
-      end
-    end
+    @pending_orders = @orders.pendings
+    @past_orders = @orders.past
   end
 
   def update
@@ -39,6 +31,8 @@ class OrdersController < ApplicationController
       redirect_to orders_path
     else
       @orders = Order.where(user: current_user)
+      @pending_orders = @orders.pendings
+      @past_orders = @orders.past
       @review = params[:order][:review]
       render :index
     end

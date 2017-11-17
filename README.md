@@ -59,69 +59,33 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ## Roadmap
 
-### Components
+### Sort orders
 
-- [x] Create navbar
-- [x] Create home page banner
-- [x] Create footer
-- [x] Create card
+- [ ] Create method in model to define status
+- [ ] Display pending and past orders in index
+- [ ] Add review form only for past orders
+- [ ] Add ajax to review form (*handle errors and formats*)
 
-### Models
+### Delete orders
 
-- [x] Create User model
-- [x] Create Farm model
-- [x] Create Product model
-- [x] Create Order model
-- [x] Create seeds
-- [x] Add photo to product
-- [x] Add name to User
-- [x] Add Photo to farm
-- [x] Add delivery time to orders
-- [ ] Add new/create farm for user (Upgrade)
+- [ ] Implement delete method
+- [ ] Add delete button for past orders only
+- [ ] Add ajax to order#delete
 
-### Homepage
+### Order model
+- [ ] Validates minimum length to review
+- [ ] Change rating input into select (*with allowed values in const*)
+- [ ] Validates delivery_time (*in case date is in the past*)
 
-- [ ] Display best reviewed farms (Upgrade)
+### Seeds
 
-### Farm index
+- [ ] Add multiple products for each farm
+- [ ] Add farms and orders for certain users
 
-- [x] Display maps with farms around // ask user for location
-- [x] Link index map to farms cards
+### Mailer
+  - [ ] Send a mail for each new order
 
-### Farm page
+### Upgrades
 
-- [x] Add product's section
-- [x] Create form
-- [x] Add farm's section
-- [x] Add reviews section
-
-### Customer page
-
-- [ ] Display pending orders
-- [ ] Display past orders from youngest to oldest
-- [ ] Create a review + rating:
-  - [ ]Add a form for each order on profile page (avec hidden input Time.now) for past orders
-  - [ ] Sort orders by status (pending/done)
-
-### Devise
-
-- [x] Design flash alerts
-- [x] Design login page
-- [x] Design signup page
-- [x] Design forgot password page
-
-### As a user I can
-- [x] See all farmers
-- [x] Show a specific farmer:
-    - [x] Farmer picture banner
-    - [x] Product picture
-    - [x] form add date delivery
-    - [x] Show Product price
-    - [x] ( Add google map itinerary link )
-    - [x] Delete review date
-    - [x] Iterate on reviews linked to the farm
-    - [x] Google Map Api key
-
-### Add Mailer
-  - [ ] Subscribe
-  - [ ] New order
+  - [ ] Add new/create farm for user (Upgrade)
+  - [ ] Display best reviewed farms (Upgrade)

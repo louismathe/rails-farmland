@@ -1,3 +1,15 @@
-User#new_order
+Hi<%= @order.user.first_name ? ' ' + @order.user.first_name : ''%>,
 
-<%= @greeting %>, find me in app/views/user_mailer/new_order.text.erb
+Thank you for your order!
+
+Here are the details:
+Product: <%= @order.product.name %>
+Quantity: <%= @order.quantity %>
+Order made on: <%= @order.created_at.strftime("%D") %>
+Total price: <%= @order.quantity * @order.product.price%>€
+
+You'll be delivered on <%= @order.delivery_time.strftime("%D") %>
+
+See ya!
+
+Serge, Happiness Officer #Farmland

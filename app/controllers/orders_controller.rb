@@ -34,7 +34,11 @@ class OrdersController < ApplicationController
 
   def destroy
     @order.destroy
-    redirect_to orders_path
+
+    respond_to do |format|
+      format.html { redirect_to orders_path }
+      format.js
+    end
   end
 
   private

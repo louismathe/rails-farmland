@@ -6,6 +6,8 @@ class Order < ApplicationRecord
   validates :quantity, numericality: { greater_than: 0 }
   validates :rating, inclusion: { in: (0..5), on: :update }
 
+  validates :review, length: { minimum: 30 }
+
   # def rated?
   #   created_at != updated_at
   # end

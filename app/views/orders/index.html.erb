@@ -19,10 +19,11 @@
                   <li class="list-group-item">Total price: <span class="pull-right"><%= order.quantity * order.product.price %>€</span></li>
                   <li class="list-group-item">Order date: <span class="pull-right"><%= order.delivery_time.strftime('%D') %></span></li>
                   <li class="list-group-item">Quantity:<span class="pull-right"><%= order.quantity %></span></li>
+                  <li class="list-group-item"><%= link_to "Cancel order", order_path(order), method: :delete, class: 'text-danger', data: {confirm: "Are you sure you want to cancel this order?"} %></li>
+
                 </ul>
                 <div class="col-sm-4 col-sm-offset-4">
                   <%= link_to 'Add a review', "#collapse#{order.created_at.strftime('%Y%m%dT%H%M%S')}", 'aria-expanded': 'false', 'aria-controls': 'collapseExample', 'data-toggle': 'collapse', role: 'button', class: 'btn btn-primary button-review' %>
-                  <%= link_to "X", order_path(order), method: :delete %>
                 </div>
               </div>
               <div class="col-sm-12">

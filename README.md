@@ -68,7 +68,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ### Delete orders
 
-- [ ] Implement delete method
+- [x] Implement delete method
 - [ ] Add delete button for past orders only
 - [ ] Add ajax to order#delete
 

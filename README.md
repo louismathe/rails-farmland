@@ -74,7 +74,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 ### Order model
 - [ ] Validates minimum length to review
 - [ ] Change rating input into select (*with allowed values in const*)
-- [ ] Validates delivery_time (*in case date is in the past*)
+- [x] Validates delivery_time (*in case date is in the past*)
 
 ### Seeds
 

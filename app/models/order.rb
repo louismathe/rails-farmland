@@ -11,6 +11,10 @@ class Order < ApplicationRecord
   validates :rating, inclusion: { in: ORDER_RATING, on: :update }
   validates :review, length: { minimum: 30, on: :update }
 
+  def delivery_time_is_in_the_past?
+    delivery_time < Date.today
+  end
+
   def pending?
     delivery_time > Date.today
   end

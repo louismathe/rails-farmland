@@ -11,7 +11,9 @@ class OrdersController < ApplicationController
     @farm = @order.product.farm
     @products = Product.where(farm_id: @farm)
     @orders = Order.where(product_id: @products)
-    if @order.save
+    if @order.delivery_time_is_in_the_past?
+      render 'farms/show'
+    elsif @order.save
       redirect_to orders_path
     else
       render 'farms/show'

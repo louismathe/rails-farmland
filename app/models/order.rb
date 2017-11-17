@@ -13,6 +13,10 @@ class Order < ApplicationRecord
 
   scope :pendings, -> { where('delivery_time > ?', Time.now) }
   scope :past, -> { where('delivery_time <= ?', Time.now) }
+  
+  def delivery_time_is_in_the_past?
+    delivery_time < Date.today
+  end
 
   # def rated?
   #   created_at != updated_at

@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   before_action :find_product, only: [:create]
   before_action :find_user, only: [:create]
-  before_action :find_order, only: [:update]
+  before_action :find_order, only: [:update, :destroy]
 
   def create
     @order = Order.new(order_params)
@@ -30,6 +30,11 @@ class OrdersController < ApplicationController
       @review = params[:order][:review]
       render :index
     end
+  end
+
+  def destroy
+    @order.destroy
+    redirect_to orders_path
   end
 
   private

@@ -6,6 +6,10 @@ class Order < ApplicationRecord
   validates :quantity, numericality: { greater_than: 0 }
   validates :rating, inclusion: { in: (0..5), on: :update }
 
+  def pending?
+    delivery_time > Date.today
+  end
+
   # def rated?
   #   created_at != updated_at
   # end

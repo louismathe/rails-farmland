@@ -30,7 +30,7 @@
                 <div class="form-review collapse" id="<%="collapse-#{order.id}"%>">
                   <%= simple_form_for(order) do |f| %>
                     <div class="col-sm-4">
-                      <%= f.input :rating %>
+                      <%= f.input :rating, collection: Order::ORDER_RATING %>
                     </div>
                     <div class="col-sm-12">
                       <%= f.hidden_field :updated_at %>
@@ -44,7 +44,7 @@
                       <%= f.submit class: 'btn btn-lg btn-primary' %>
                     </div>
                   <% end %>
-                </div>
+                </di
               </div>
             </div>
           </div>

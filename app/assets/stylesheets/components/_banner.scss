@@ -16,14 +16,15 @@
 
     h1 {
       color: white;
-      font-size: 50px;
+      font-size: 90px;
       font-weight: lighter;
     }
 
     .description {
-      color: white;
-      font-size: 24px;
+      color: rgba(220,220,220,0.8);
+      font-size: 44px;
       margin: 25px 0;
+
     }
 
     @media(min-width: 768px) {

@@ -21,9 +21,10 @@
     }
 
     .description {
-      color: white;
+      color: rgba($white,0.8);
       font-size: 24px;
       margin: 25px 0;
+
     }
 
     @media(min-width: 768px) {

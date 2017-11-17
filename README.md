@@ -83,7 +83,7 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ### Mailer
   - [x] Send a mail for each new order
-  - [ ] Text version
+  - [x] Text version
 
 ### Review
 - [ ] Hide order without rating/review on farm page

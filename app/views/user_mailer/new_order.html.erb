@@ -1,0 +1,20 @@
+<h3>Hi<%= @order.user.name ? ' ' + @order.user.name : ''%>,</h3>
+
+<p>Thank you for your order.</p>
+
+<p>Here are the details:</p>
+<ul>
+  <li>Product: <strong><%= @order.product.name %></strong></li>
+  <li>Quantity: <strong><%= @order.quantity %></strong></li>
+  <li>Order made on: <strong><%= @order.created_at.strftime("%D") %></strong></li>
+  <li>Total price: <strong><%= @order.quantity * @order.product.price%>€</strong></li>
+</ul>
+
+
+<p> You'll be delivered on <%= @order.delivery_time.strftime("%D") %></p>
+
+
+
+<p>See ya!</p>
+
+<p>Serge, Happiness Officer <strong>#Farmland</strong></p>

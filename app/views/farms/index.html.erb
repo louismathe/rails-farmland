@@ -25,49 +25,5 @@
 </div>
 
 <% content_for(:after_js) do %>
-  <script>
-  const handler = Gmaps.build('Google');
-  handler.buildMap({ internal: { id: 'map' } }, function() {
-    markers = handler.addMarkers(<%= raw @hash.to_json %>);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-    if (markers.length == 0) {
-      handler.getMap().setZoom(2);
-    } else if (markers.length == 1) {
-      handler.getMap().setZoom(14);
-    }
-  });
-
-  const getLocation = () => {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    }
-  }
-
-  let latitude = '';
-  let longitude = '';
-
-  const showPosition = (position) => {
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
-
-    const mapOptions = {
-      center: new google.maps.LatLng(latitude, longitude),
-      zoom: 12
-    };
-
-    const handler = Gmaps.build('Google');
-    handler.buildMap({ provider: mapOptions, internal: { id: 'map' } }, function() {
-      markers = handler.addMarkers(<%= raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      if (markers.length == 0) {
-        handler.getMap().setZoom(2);
-      } else if (markers.length == 1) {
-        handler.getMap().setZoom(14);
-      }
-    });
-  }
-
-  getLocation();
-  </script>
+  <%= render 'farms_map' %>
 <% end %>

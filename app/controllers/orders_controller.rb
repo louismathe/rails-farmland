@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   before_action :find_product, only: [:create]
   before_action :find_user, only: [:create]
-  before_action :find_order, only: [:update]
+  before_action :find_order, only: [:update, :destroy]
 
   def create
     @order = Order.new(order_params)
@@ -20,6 +20,16 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.where(user: current_user)
+    @pending_orders = []
+    @past_orders = []
+
+    @orders.each do |order|
+      if order.pending?
+        @pending_orders << order
+      else
+        @past_orders << order
+      end
+    end
   end
 
   def update
@@ -32,11 +42,16 @@ class OrdersController < ApplicationController
     end
   end
 
-  private
+  def destroy
+    @order.destroy
 
-  def find_order
-    @order = Order.find(params[:id])
+    respond_to do |format|
+      format.html { redirect_to orders_path }
+      format.js
+    end
   end
+
+  private
 
   def review_params
     params.require(:order).permit(:rating, :review)
@@ -44,6 +59,10 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(:quantity, :delivery_time, :product_id)
+  end
+
+  def find_order
+    @order = Order.find(params[:id])
   end
 
   def find_product

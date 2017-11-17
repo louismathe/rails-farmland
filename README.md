@@ -61,16 +61,15 @@ When your PR has been approved, you can `git pull` the origin master and delete 
 
 ### Sort orders
 
-- [ ] Create method in model to define status
-- [ ] Display pending and past orders in index
-- [ ] Add review form only for past orders
-- [ ] Add ajax to review form (*handle errors and formats*)
+- [x] Create method in model to define status
+- [x] Display pending and past orders in index
+- [x] Add review form only for past orders
 
 ### Delete orders
 
-- [ ] Implement delete method
-- [ ] Add delete button for past orders only
-- [ ] Add ajax to order#delete
+- [x] Implement delete method
+- [x] Add delete button for past orders only
+- [x] Add ajax to order#delete
 
 ### Order model
 - [ ] Validates minimum length to review

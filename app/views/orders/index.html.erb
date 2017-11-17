@@ -2,10 +2,11 @@
   <div class="orders">
     <h1>My orders</h1>
     <div class="row">
-      <% @orders.each do |order| %>
+      <h2>Pending orders</h2>
+      <% @pending_orders.each do |order| %>
         <div id="order-<%= order.id %>" class="order panel panel-success">
           <div class="panel-heading">
-            <h2 class="panel-title"><%= order.product.name %><span class="pull-right"><%= order.created_at.strftime('%D') %></span></h2>
+            <h3 class="panel-title"><%= order.product.name %><span><%= order.created_at.strftime('%D') %></span></h3>
           </div>
           <div class="panel-body">
             <div class="row">
@@ -19,8 +20,34 @@
                   <li class="list-group-item">Total price: <span class="pull-right"><%= order.quantity * order.product.price %>€</span></li>
                   <li class="list-group-item">Order date: <span class="pull-right"><%= order.delivery_time.strftime('%D') %></span></li>
                   <li class="list-group-item">Quantity:<span class="pull-right"><%= order.quantity %></span></li>
-                  <li class="list-group-item"><%= link_to "Cancel order", order_path(order), method: :delete, remote: true, class: 'text-danger', data: { confirm: "Are you sure you want to cancel this order?" } %></li>
+                </ul>
+                <div class="col-sm-4 col-sm-offset-4">
+                  <%= link_to "Cancel order", order_path(order), method: :delete, remote: true, class: 'btn btn-danger', data: { confirm: "Are you sure you want to cancel this order?" } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
 
+      <h2>Past orders</h2>
+      <% @past_orders.each do |order| %>
+        <div id="order-<%= order.id %>" class="order panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= order.product.name %><span><%= order.created_at.strftime('%D') %></span></h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-4">
+                <%= link_to farm_path(order.product.farm) do %>
+                  <div class="order-image" style="background-image: url('<%= order.product.photo %>');"></div>
+                <% end %>
+              </div>
+              <div class="col-sm-8">
+                <ul class="list-group">
+                  <li class="list-group-item">Total price: <span class="pull-right"><%= order.quantity * order.product.price %>€</span></li>
+                  <li class="list-group-item">Order date: <span class="pull-right"><%= order.delivery_time.strftime('%D') %></span></li>
+                  <li class="list-group-item">Quantity:<span class="pull-right"><%= order.quantity %></span></li>
                 </ul>
                 <div class="col-sm-4 col-sm-offset-4">
                   <%= link_to 'Add a review', "#collapse-#{order.id}", 'aria-expanded': 'false', 'aria-controls': 'collapseExample', 'data-toggle': 'collapse', role: 'button', class: 'btn btn-primary button-review' %>

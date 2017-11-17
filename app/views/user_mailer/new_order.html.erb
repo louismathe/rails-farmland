@@ -1,6 +1,6 @@
 <h3>Hi<%= @order.user.first_name ? ' ' + @order.user.first_name : ''%>,</h3>
 
-<p>Thank you for your order.</p>
+<p>Thank you for your order!</p>
 
 <p>Here are the details:</p>
 <ul>
@@ -10,10 +10,7 @@
   <li>Total price: <strong><%= @order.quantity * @order.product.price%>€</strong></li>
 </ul>
 
-
 <p> You'll be delivered on <%= @order.delivery_time.strftime("%D") %></p>
-
-
 
 <p>See ya!</p>
 

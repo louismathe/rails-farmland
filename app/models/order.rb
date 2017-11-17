@@ -11,9 +11,8 @@ class Order < ApplicationRecord
   validates :rating, inclusion: { in: ORDER_RATING, on: :update }
   validates :review, length: { minimum: 30, on: :update }
 
-  def pending?
-    delivery_time > Date.today
-  end
+  scope :pendings, -> { where('delivery_time > ?', Time.now) }
+  scope :past, -> { where('delivery_time <= ?', Time.now) }
 
   # def rated?
   #   created_at != updated_at
